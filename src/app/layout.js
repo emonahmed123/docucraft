@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { getDocuments } from "../lib/doc";
 import "./globals.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,6 +17,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  getDocuments()
   return (
     <html lang="en">
       <body
