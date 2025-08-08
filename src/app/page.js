@@ -1,8 +1,8 @@
-
+import Landing from "@/components/Landing";
 export default function Home() {
   return (
-    <div className="h-[1500px]">
-      hello world
+    <div>
+      <Landing />
 
     </div>
   );
