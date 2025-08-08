@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* @plugin "@tailwindcss/typography"; */
+@plugin "../typography.js";
+@plugin "@tailwindcss/aspect-ratio";
+/* 
+@import "./typography.js"; */
+
+
+@theme {
+  /* Font sizes */
+  --font-size-2xs: 0.75rem;
+  --font-size-2xs--line-height: 1.25rem;
+
+  --font-size-xs: 0.8125rem;
+  --font-size-xs--line-height: 1.5rem;
+
+  --font-size-sm: 0.875rem;
+  --font-size-sm--line-height: 1.5rem;
+
+  --font-size-base: 1rem;
+  --font-size-base--line-height: 1.75rem;
+
+  --font-size-lg: 1.125rem;
+  --font-size-lg--line-height: 1.75rem;
+
+  --font-size-xl: 1.25rem;
+  --font-size-xl--line-height: 1.75rem;
+
+  --font-size-2xl: 1.5rem;
+  --font-size-2xl--line-height: 2rem;
+
+  --font-size-3xl: 1.875rem;
+  --font-size-3xl--line-height: 2.25rem;
+
+  --font-size-4xl: 2.25rem;
+  --font-size-4xl--line-height: 2.5rem;
+
+  --font-size-5xl: 3rem;
+  --font-size-5xl--line-height: 1;
+
+  --font-size-6xl: 3.75rem;
+  --font-size-6xl--line-height: 1;
+
+  --font-size-7xl: 4.5rem;
+  --font-size-7xl--line-height: 1;
+
+  --font-size-8xl: 6rem;
+  --font-size-8xl--line-height: 1;
+
+  --font-size-9xl: 8rem;
+  --font-size-9xl--line-height: 1;
+
+  /* Colors */
+  --color-lighter-dark: #0F172A;
+  --color-dark: #0B1120;
+
+  /* Box Shadow */
+  --shadow-glow: 0 0 4px rgb(0 0 0 / 0.1);
+
+  /* Max width */
+  --max-w-lg: 33rem;
+  --max-w-2xl: 40rem;
+  --max-w-3xl: 50rem;
+  --max-w-5xl: 66rem;
+
+  /* Opacity */
+  --opacity-1: 0.01;
+  --opacity-2\.5: 0.025;
+  --opacity-7\.5: 0.075;
+  --opacity-15: 0.15;
+
+  /* Background Images */
+  --bg-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --bg-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
